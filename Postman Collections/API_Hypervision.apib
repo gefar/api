@@ -1,0 +1,218 @@
+FORMAT: 1A
+HOST: http://example.com
+
+# API Hypervision
+Le portail Hypervision permet d'enrichir les événements qui remontent dans l'hyperviseur BEM (BMC 
+
+Event Manager) depuis les outils suivants : 
+
+ControlM V8, Hobbit, Newtest,Sentinel, Zabbix
+
+## Authentication
+This API uses Basic Authentication for its authentication.
+
+# Group Astreinte
+
+## Api Astreinte [/api/astreinte]
+
+### Get all astreinte [POST]
+TODO: Add Description
+
++ Request (application/json)
+    + Headers
+
+            Authorization:Basic aXB2NzdhcHBhcGlfcmVhZDo3XyFAa0A4RG1tNjY2
+
+    + Attributes (Get all astreinteRequest)
+
+    + Body
+
+            {
+                "params": {
+                    "astreinte_id": 75
+                },
+                "select": {
+                    "astreinte_group": ""
+                }
+            }
+
+
++ Response 200 
+
+
+
+
+
+# Group Consigne
+
+## Api Dda Newtest [/api/dda/newtest]
+
+### DDA [GET]
+TODO: Add Description
+
++ Response 200 
+
+
+
+
+
+# Group Controlm
+
+## Api Controlm Get Job [/api/controlm/get_job]
+
+### Get Controlm job [POST]
+TODO: Add Description
+
++ Request (application/json)
+    + Headers
+
+            Authorization:Basic aXB2NzdhcHBhcGlfcmVhZDo3XyFAa0A4RG1tNjY2
+
+    + Attributes (Get Controlm jobRequest)
+
+    + Body
+
+            {
+                "param": {
+                    "data_center": "pifa1"
+                }
+            }
+
+
++ Response 200 
+
+
+
+
+
+# Group Departement
+
+## Api Department Get Deparment [/api/department/get_deparment]
+
+### Get all departments [GET]
+TODO: Add Description
+
++ Request 
+    + Headers
+
+            Authorization:Basic aXB2NzdhcHBhcGlfcmVhZDo3XyFAa0A4RG1tNjY2
+
+
+
+
++ Response 200 
+
+
+
+
+## Api Department Get Deparment 110 [/api/department/get_deparment/110]
+
+### Get one department [GET]
+TODO: Add Description
+
++ Response 200 
+
+
+
+
+
+# Group HostGroup
+
+## Api Zabbix Hostgroup [/api/zabbix/hostgroup]
+
+### Get all Zabbix Hostgroups [GET]
+TODO: Add Description
+
++ Request 
+    + Headers
+
+            Authorization:Basic aXB2NzdhcHBhcGlfcmVhZDo3XyFAa0A4RG1tNjY2
+
+
+
+
++ Response 200 
+
+
+
+### Create Zabbix Hostgroup [POST]
+TODO: Add Description
++ Attributes
+    + id_department (string, optional) -
+
+        + Default: 110
+        + Sample: 110
+    + hostgroup (string, optional) -
+
+        + Default: toto
+        + Sample: toto
+
++ Request (application/x-www-form-urlencoded)
+    + Headers
+
+            Authorization:Basic aXB2NzdhcHBhcGlfcmVhZDo3XyFAa0A4RG1tNjY2
+
+
+
+
++ Response 200 
+
+
+
+
+## Api Zabbix Hostgroup 256 [/api/zabbix/hostgroup/256]
+
+### Get one Zabbix Hostgroup [GET]
+TODO: Add Description
+
++ Request 
+    + Headers
+
+            Authorization:Basic aXB2NzdhcHBhcGlfcmVhZDo3XyFAa0A4RG1tNjY2
+
+
+
+
++ Response 200 
+
+
+
+
+
+# Data Structures
+
+## Get all astreinteRequest (object)
+
+
+### Properties
++ `params` (Params, required) 
++ `select` (Select, required) 
+
+
+## Params (object)
+
+
+### Properties
++ `astreinte_id` (number, required) 
+
+
+## Select (object)
+
+
+### Properties
++ `astreinte_group` (string, required) 
+
+
+## Get Controlm jobRequest (object)
+
+
+### Properties
++ `param` (Param, required) 
+
+
+## Param (object)
+
+
+### Properties
++ `data_center` (string, required) 
+
